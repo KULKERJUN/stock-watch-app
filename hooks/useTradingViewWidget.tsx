@@ -1,7 +1,7 @@
 'use client';
-import { useEffect, useRef, RefObject } from "react";
+import { useEffect, useRef }     from "react";
 
-const useTradingViewWidget = (scriptUrl: string, config: Record<string, unknown>, height = 600): RefObject<HTMLDivElement | null> => {
+const useTradingViewWidget = (scriptUrl: string, config: Record<string, unknown>, height = 600) => {
     const containerRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
@@ -26,6 +26,5 @@ const useTradingViewWidget = (scriptUrl: string, config: Record<string, unknown>
     }, [scriptUrl, config, height])
 
     return containerRef;
-};
-
-export default useTradingViewWidget;
+}
+export default useTradingViewWidget
