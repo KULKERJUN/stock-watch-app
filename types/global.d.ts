@@ -70,7 +70,17 @@ declare global {
     type User = {
         id: string;
         name: string;
+        username?: string;
         email: string;
+        photo?: string;
+        joinDate?: Date;
+        bio?: string;
+        location?: string;
+        watchlistCount?: number;
+        alertsCount?: number;
+        investmentGoals?: string;
+        riskTolerance?: string;
+        preferredIndustry?: string;
     };
 
     type Stock = {
